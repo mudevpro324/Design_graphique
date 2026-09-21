@@ -2674,16 +2674,6 @@ body {
   margin-top: 0 !important;
   }
 
-  .elmer-illustrations {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-
-  .elmer-illustrations img {
-    height: auto;
-    transform: none;
-  }
-
   .pokematch-creations {
     gap: 30px;
   }
@@ -2973,15 +2963,46 @@ display: grid;
   }
 
 
-  .elmer-illustrations {
-    gap: 12px;
-  }
+/* ==========================================================
+   ELMER — MOBILE
+   ========================================================== */
+
+.elmer-illustrations {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+
+  width: 100% !important;
+
+  /* rapproche la galerie des images précédentes */
+  margin-top: -120px !important;
+
+  padding: 0 !important;
+  gap: 0 !important;
+}
+
+.elmer-illustrations img {
+  display: block !important;
+
+  /* images beaucoup plus grandes */
+  width: 140% !important;
+  max-width: none !important;
+
+  height: auto !important;
+  margin-top: -100px !important;
+  margin-bottom: -100px !important;
+
+  padding: 0 !important;
+
+  transform: none !important;
+  object-fit: contain !important;
+}
 
     .about-teaser-text h2 {
   font-size: 1.8rem;
 }
   .about-teaser-text p {
-  margin-bottom: -16px;
+  margin-bottom: -40px;
   color: rgba(23,20,43,0.82);
   font-size: 0.8rem;
   font-weight: 400;
