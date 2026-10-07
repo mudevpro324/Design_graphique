@@ -9,7 +9,7 @@ const PROJECTS = [
   {
     id: "pamparina",
     title: "Pamparina",
-    image: "/images/Abris bus pamparina.png",
+    image: "/images/optimized/Abris bus pamparina.webp",
     category: "Identité visuelle",
     year: "2026",
     tagline: "Identité visuelle",
@@ -18,7 +18,7 @@ const PROJECTS = [
   {
     id: "elmer",
     title: "Elmer",
-    image: "/images/elmer_projet_2.jpg",
+    image: "/images/optimized/elmer_projet_2.webp",
     category: "Illustration",
     year: "2025",
     tagline: "Illustration couverture de livre",
@@ -27,7 +27,7 @@ const PROJECTS = [
   {
     id: "Pokematch",
     title: "Pokématch",
-    image: "/images/pokematch_projet_5.png",
+    image: "/images/optimized/pokematch_projet_5.webp",
     category: "Produits dérivés",
     year: "2026",
     tagline: "Identité visuelle pour une collaboration fictive",
@@ -36,7 +36,7 @@ const PROJECTS = [
   {
     id: "ehpad",
     title: "Ehpad",
-    image: "/images/ehpad_projet_6.png",
+    image: "/images/optimized/ehpad_projet_6.webp",
     category: "Site internet",
     year: "2026",
     tagline: "Site internet",
@@ -45,7 +45,7 @@ const PROJECTS = [
   {
     id: "vinyle",
     title: "Musique",
-    image: "/images/vinyle_projet_4.png",
+    image: "/images/optimized/vinyle_projet_4.webp",
     category: "Identité visuelle",
     year: "2025",
     tagline: "Identité visuelle",
@@ -54,7 +54,7 @@ const PROJECTS = [
   {
     id: "binche",
     title: "Binche",
-    image: "/images/binche_projet_3.png",
+    image: "/images/optimized/binche_projet_3.webp",
     category: "Affiche de carnaval",
     year: "2026",
     tagline: "Affiche de carnaval",
@@ -313,7 +313,7 @@ function Home({ go, openProject }) {
 
       <section className="section about-teaser">
         <div className="about-teaser-portrait">
-          <img src="/images/photo_solene.png" alt="Solène Crouzet" className="about-teaser-image" />
+          <img src="/images/optimized/photo_solene.webp" alt="Solène Crouzet" className="about-teaser-image" />
         </div>
 
         <div className="about-teaser-text">
@@ -393,22 +393,22 @@ function Projects({ openProject }) {
 function PamparinaBook() {
   const pages = [
     null,
-    "/images/page_1_pamparina.png",
-    "/images/page_2_pamparina.png",
-    "/images/page_3_pamparina.png",
-    "/images/page_4_pamparina.png",
-    "/images/page_5_pamparina.png",
-    "/images/page_6_pamparina.png",
-    "/images/page_7_pamparina.png",
-    "/images/page_8_pamparina.png",
-    "/images/page_9_pamparina.png",
-    "/images/page_10_pamparina.png",
-    "/images/page_11_pamparina.png",
-    "/images/page_12_pamparina.png",
-    "/images/page_13_pamparina.png",
-    "/images/page_14_pamparina.png",
-    "/images/page_15_pamparina.png",
-    "/images/page_16_pamparina.png",
+    "/images/optimized/page_1_pamparina.webp",
+    "/images/optimized/page_2_pamparina.webp",
+    "/images/optimized/page_3_pamparina.webp",
+    "/images/optimized/page_4_pamparina.webp",
+    "/images/optimized/page_5_pamparina.webp",
+    "/images/optimized/page_6_pamparina.webp",
+    "/images/optimized/page_7_pamparina.webp",
+    "/images/optimized/page_8_pamparina.webp",
+    "/images/optimized/page_9_pamparina.webp",
+    "/images/optimized/page_10_pamparina.webp",
+    "/images/optimized/page_11_pamparina.webp",
+    "/images/optimized/page_12_pamparina.webp",
+    "/images/optimized/page_13_pamparina.webp",
+    "/images/optimized/page_14_pamparina.webp",
+    "/images/optimized/page_15_pamparina.webp",
+    "/images/optimized/page_16_pamparina.webp",
     null,
   ];
 
@@ -706,17 +706,17 @@ function ProjectDetail({ project, go }) {
           <div className="project-gallery-three">
 
             <img
-              src="/images/ecocup_pamparina.png"
+              src="/images/optimized/ecocup_pamparina.webp"
               alt="Pamparina visuel 2"
             />
 
             <img
-              src="/images/badge_carte_pamparina.png"
+              src="/images/optimized/badge_carte_pamparina.webp"
               alt="Pamparina visuel 3"
             />
 
             <img
-              src="/images/tote_bag_pamparina.png"
+              src="/images/optimized/tote_bag_pamparina.webp"
               alt="Pamparina visuel 4"
             />
 
@@ -741,17 +741,17 @@ function ProjectDetail({ project, go }) {
           <div className="project-gallery-three">
 
             <img
-              src="/images/mockup_elmer_original.png"
+              src="/images/optimized/mockup_elmer_original.webp"
               alt="Mockup Elmer original"
             />
 
             <img
-              src="/images/mockup_elmer_devant.png"
+              src="/images/optimized/mockup_elmer_devant.webp"
               alt="Mockup Elmer devant"
             />
 
             <img
-              src="/images/mockup_elmer_dos.png"
+              src="/images/optimized/mockup_elmer_dos.webp"
               alt="Mockup Elmer dos"
             />
 
@@ -761,17 +761,17 @@ function ProjectDetail({ project, go }) {
           <div className="elmer-illustrations">
 
             <img
-              src="/images/elmer_illu_1.png"
+              src="/images/optimized/elmer_illu_1.webp"
               alt="Illustration Elmer 1"
             />
 
             <img
-              src="/images/elmer_illu_2.png"
+              src="/images/optimized/elmer_illu_2.webp"
               alt="Illustration Elmer 2"
             />
 
             <img
-              src="/images/elmer_illu_3.png"
+              src="/images/optimized/elmer_illu_3.webp"
               alt="Illustration Elmer 3"
             />
 
@@ -852,12 +852,12 @@ function ProjectDetail({ project, go }) {
           <div className="ehpad-gallerie">
 
             <img
-              src="/images/ehpad_site_page_1.png"
+              src="/images/optimized/ehpad_site_page_1.webp"
               alt="Page 1 site"
             />
 
             <img
-              src="/images/ehpad_site_page_5.png"
+              src="/images/optimized/ehpad_site_page_5.webp"
               alt="Page 2 site"
             />
 
@@ -866,12 +866,12 @@ function ProjectDetail({ project, go }) {
           <div className="ehpad-gallerie">
 
             <img
-              src="/images/ehpad_site_page_4.png"
+              src="/images/optimized/ehpad_site_page_4.webp"
               alt="Page 3 site"
             />
 
             <img
-              src="/images/ehpad_site_page_6.png"
+              src="/images/optimized/ehpad_site_page_6.webp"
               alt="Page 4 site"
             />
           </div>
@@ -879,12 +879,12 @@ function ProjectDetail({ project, go }) {
           <div className="ehpad-gallerie">
 
             <img
-              src="/images/ehpad_site_page_7.png"
+              src="/images/optimized/ehpad_site_page_7.webp"
               alt="Page 5 site"
             />
 
             <img
-              src="/images/ehpad_site_page_8.png"
+              src="/images/optimized/ehpad_site_page_8.webp"
               alt="Page 6 site"
             />
           </div>
@@ -912,24 +912,24 @@ function ProjectDetail({ project, go }) {
   <>
     <div className="project-gallery-two">
       <img
-        src="/images/vinyle_vert.jpg"
+        src="/images/optimized/vinyle_vert.webp"
         alt="Vinyle - vert"
       />
 
       <img
-        src="/images/vinyles_double.jpg"
+        src="/images/optimized/vinyles_double.webp"
         alt="Vinyles - double"
       />
     </div>
 
     <div className="project-gallery-two-reverse">
   <img
-    src="/images/pochettes_vinyles_dos.png"
+    src="/images/optimized/pochettes_vinyles_dos.webp"
     alt="vinyles derrière"
   />
 
   <img
-    src="/images/vinyles_scene.png"
+    src="/images/optimized/vinyles_scene.webp"
     alt="Vinyle scene"
   />
 </div>
@@ -946,17 +946,17 @@ function ProjectDetail({ project, go }) {
           <div className="project-gallery-three">
 
             <img
-              src="/images/logo_binche.png"
+              src="/images/optimized/logo_binche.webp"
               alt="logo binche"
             />
 
             <img
-              src="/images/carnaval_binche.jpg"
+              src="/images/optimized/carnaval_binche.webp"
               alt="carnaval de binche gilles"
             />
 
             <img
-              src="/images/illustration_binche.png"
+              src="/images/optimized/illustration_binche.webp"
               alt="Illustration binche"
             />
 
@@ -979,7 +979,7 @@ function About({ go }) {
   return (
     <div className="page">
       <section className="about-cv-section">
-        <img src="/images/CV%20pro.png" alt="CV de Solène Crouzet" className="about-cv" />
+        <img src="/images/optimized/CV%20pro.webp" alt="CV de Solène Crouzet" className="about-cv" />
       </section>
       <Footer go={go} />
     </div>
