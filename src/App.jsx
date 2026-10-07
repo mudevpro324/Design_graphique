@@ -797,32 +797,36 @@ function ProjectDetail({ project, go }) {
 
           <div className="pokematch-creations">
   <video
+    ref={(el) => (pokemonVideosRef.current[0] = el)}
     src="/images/sinner_pokematch.mp4"
-    autoPlay
+    preload="auto"
     loop
     muted
     playsInline
     className="sinner-video"
   />
   <video
+    ref={(el) => (pokemonVideosRef.current[1] = el)}
     src="/images/alcaraz_pokematch.mp4"
-    autoPlay
+    preload="auto"
     loop
     muted
     playsInline
     className="sinner-video"
   />
   <video
+    ref={(el) => (pokemonVideosRef.current[2] = el)}
     src="/images/sabalenka_pokematch.mp4"
-    autoPlay
+    preload="auto"
     loop
     muted
     playsInline
     className="sinner-video"
   />
    <video
+    ref={(el) => (pokemonVideosRef.current[3] = el)}
     src="/images/andreeva_pokematch.mp4"
-    autoPlay
+    preload="auto"
     loop
     muted
     playsInline
