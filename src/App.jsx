@@ -458,8 +458,8 @@ function ProjectDetail({ project, go }) {
 
   if (videos.length !== 4) return;
 
-  const startVideosTogether = async () => {
-    // Attendre que les 4 vidéos soient prêtes
+  const startTogether = async () => {
+    // Attendre que les 4 vidéos aient suffisamment chargé
     await Promise.all(
       videos.map((video) => {
         if (video.readyState >= 3) {
@@ -467,29 +467,35 @@ function ProjectDetail({ project, go }) {
         }
 
         return new Promise((resolve) => {
-          video.addEventListener("canplay", resolve, { once: true });
+          video.addEventListener("canplay", resolve, {
+            once: true
+          });
         });
       })
     );
 
-    // Remettre les 4 vidéos à 0
+    // Toutes à 0 seconde
     videos.forEach((video) => {
       video.pause();
       video.currentTime = 0;
     });
 
-    // Lancer les 4 vidéos ensemble
-    await Promise.all(
-      videos.map((video) => video.play())
-    );
+    // Lancement au même frame
+    requestAnimationFrame(() => {
+      videos.forEach((video) => {
+        video.play().catch((error) => {
+          console.log("Lecture impossible :", error);
+        });
+      });
+    });
   };
 
-  startVideosTogether().catch((error) => {
-    console.log("Erreur de lecture des vidéos :", error);
-  });
+  startTogether();
 
   return () => {
-    videos.forEach((video) => video.pause());
+    videos.forEach((video) => {
+      video.pause();
+    });
   };
 }, [project.id]);
 
@@ -807,41 +813,44 @@ function ProjectDetail({ project, go }) {
 
           <div className="pokematch-creations">
   <video
-    ref={(el) => (pokemonVideosRef.current[0] = el)}
-    src="/images/sinner_pokematch.mp4"
-    preload="auto"
-    loop
-    muted
-    playsInline
-    className="sinner-video"
-  />
-  <video
-    ref={(el) => (pokemonVideosRef.current[1] = el)}
-    src="/images/alcaraz_pokematch.mp4"
-    preload="auto"
-    loop
-    muted
-    playsInline
-    className="sinner-video"
-  />
-  <video
-    ref={(el) => (pokemonVideosRef.current[2] = el)}
-    src="/images/sabalenka_pokematch.mp4"
-    preload="auto"
-    loop
-    muted
-    playsInline
-    className="sinner-video"
-  />
-   <video
-    ref={(el) => (pokemonVideosRef.current[3] = el)}
-    src="/images/andreeva_pokematch.mp4"
-    preload="auto"
-    loop
-    muted
-    playsInline
-    className="sinner-video"
-  />
+  ref={(el) => (pokemonVideosRef.current[0] = el)}
+  src="/images/optimized-videos/sinner_pokematch.mp4"
+  preload="auto"
+  loop
+  muted
+  playsInline
+  className="sinner-video"
+/>
+
+<video
+  ref={(el) => (pokemonVideosRef.current[1] = el)}
+  src="/images/optimized-videos/alcaraz_pokematch.mp4"
+  preload="auto"
+  loop
+  muted
+  playsInline
+  className="alcaraz-video"
+/>
+
+<video
+  ref={(el) => (pokemonVideosRef.current[2] = el)}
+  src="/images/optimized-videos/sabalenka_pokematch.mp4"
+  preload="auto"
+  loop
+  muted
+  playsInline
+  className="sabalenka-video"
+/>
+
+<video
+  ref={(el) => (pokemonVideosRef.current[3] = el)}
+  src="/images/optimized-videos/andreeva_pokematch.mp4"
+  preload="auto"
+  loop
+  muted
+  playsInline
+  className="andreeva-video"
+/>
 
 
 </div>
