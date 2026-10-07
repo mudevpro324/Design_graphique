@@ -451,37 +451,47 @@ function PamparinaBook() {
 function ProjectDetail({ project, go }) {
   const pokemonVideosRef = useRef([]);
 
-  useEffect(() => {
-    const videos = pokemonVideosRef.current.filter(Boolean);
-    if (videos.length !== 4) return;
+    useEffect(() => {
+  if (project.id !== "Pokematch") return;
 
-    const startVideosTogether = async () => {
-      videos.forEach((video) => {
-        video.currentTime = 0;
-      });
+  const videos = pokemonVideosRef.current.filter(Boolean);
 
-      await Promise.all(
-        videos.map((video) =>
-          video.play().catch(() => {})
-        )
-      );
-    };
+  if (videos.length !== 4) return;
 
-    Promise.all(
-      videos.map(
-        (video) =>
-          new Promise((resolve) => {
-            if (video.readyState >= 3) {
-              resolve();
-            } else {
-              video.addEventListener("canplay", resolve, {
-                once: true,
-              });
-            }
-          })
-      )
-    ).then(startVideosTogether);
-  }, []);
+  const startVideosTogether = async () => {
+    // Attendre que les 4 vidéos soient prêtes
+    await Promise.all(
+      videos.map((video) => {
+        if (video.readyState >= 3) {
+          return Promise.resolve();
+        }
+
+        return new Promise((resolve) => {
+          video.addEventListener("canplay", resolve, { once: true });
+        });
+      })
+    );
+
+    // Remettre les 4 vidéos à 0
+    videos.forEach((video) => {
+      video.pause();
+      video.currentTime = 0;
+    });
+
+    // Lancer les 4 vidéos ensemble
+    await Promise.all(
+      videos.map((video) => video.play())
+    );
+  };
+
+  startVideosTogether().catch((error) => {
+    console.log("Erreur de lecture des vidéos :", error);
+  });
+
+  return () => {
+    videos.forEach((video) => video.pause());
+  };
+}, [project.id]);
 
   return (
     <div className="page project-detail-page">
